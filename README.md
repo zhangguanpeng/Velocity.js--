@@ -1,7 +1,7 @@
 # vue-animation-velocity
 
-> A vue.js project, and the animation created by velocity.js without jQuery.  
-> 这是一个vue的项目，里面的动画是基于velocity.js创建，并且没有使用jQuery。
+> A vue.js project, and the animation created by velocity.js and the plugin velocity-vue without jQuery.  
+> 这是一个vue的项目，里面的动画是基于velocity.js以及插件velocity-vue创建，没有使用jQuery。
 
 ## Build Setup 创建与安装
 
@@ -121,7 +121,7 @@ require([ "jquery", "velocity", "velocity-ui" ], function ($, Velocity) {
  ```
 2) 如果你使用RequireJS加载Velocity依赖Zepto，只需要在上面的配置中用“Zepto”代替“jQuery”。（注意：Zepto本身并不兼容模块加载器，因此你需要在RequireJS回调函数中传入$，然后在函数内部定义var $ = window.Zepto）  
 
-3) 如果你仅仅使用Velocity本身，只需要像下面那样配置即可：
+3) 如果你仅仅使用Velocity本身，只需要像下面那样配置即可（使用在vue项目中，下面代码需要放在main.js中）：
 ```js
 var Velocity = require("path/to/velocity.js");
 // 可选项: 如果需要使用 UI pack, 在Velocity之后引用. (不需要为他定义一个变量.)
@@ -149,4 +149,6 @@ require("path/to/velocity.ui.js");
 /* Your app code here. */
 Velocity(document.body, { opacity: 0.5 });
 ```
+
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

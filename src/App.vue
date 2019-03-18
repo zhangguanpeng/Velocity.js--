@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <VelocityComponent animationType="transition.slideUpIn" :animation="logoAnimation">
+        <img src="./assets/logo.png">
+    </VelocityComponent>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+      return {
+          logoAnimation: {
+              duration: 1000
+          }
+      }
+  }
 }
 </script>
 

@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+var Velocity = require('velocity-animate/velocity.js');
+require("velocity-animate/velocity.ui.js");
+import velocityPlugin from './components/velocitycomponent'
+Vue.use(velocityPlugin)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
